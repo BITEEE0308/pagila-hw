@@ -3,3 +3,4 @@
  * Use tables inventory and film.
  * Order by film title alphabetically.
  */
+SELECT film_id, title, COUNT(*) FROM film JOIN inventory USING (film_id) GROUP BY film_id HAVING title LIKE 'H%' ORDER BY title DESC;
